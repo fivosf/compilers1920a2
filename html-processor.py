@@ -64,6 +64,9 @@ with open('testpage.txt','r') as fp:
     #Removing all tags from urls string... I did this to remove images and alt tags
     # I wanted to display only links and text of the links
     urls = removeAllTags.sub(' ',urls)  
+    
+    #Removing extra whitespaces from urls  
+    urls = removeWhitespaces.sub(' ',urls)
 
     #Removing all tags
     text = removeAllTags.sub(' ',text)  
